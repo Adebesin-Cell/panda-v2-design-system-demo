@@ -47,6 +47,7 @@
   "scripts": {
     "codegen": "panda codegen",
     "lib": "panda codegen && panda lib",
+    "dev": "panda lib --watch",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {

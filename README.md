@@ -27,7 +27,7 @@ export default defineConfig({
 
 ```bash
 bun install
-bun run dev      # publishes @bethelflow/ds, generates both apps, starts both dev servers
+bun run dev      # publishes @bethelflow/ds, watches it (panda lib --watch), starts both apps
 ```
 
 ## Publish and consume by hand
@@ -39,8 +39,8 @@ cd apps/checkout && bunx panda codegen  # the app picks it all up through `desig
 
 ## Try what the talk showed
 
-1. **Change the design system, every app follows.** In `packages/ds/panda.config.ts`, change `control: { value: '14px' }` to `'24px'`. Restart `bun run dev` and refresh both apps: every input and button gets rounder.
-2. **Override one token in one app.** In `apps/checkout/panda.config.ts`, uncomment the `theme` line. Restart `bun run dev`. Panda prints that the app's value wins, the checkout turns purple, and the showcase stays blue.
+1. **Change the design system, every app follows.** In `packages/ds/panda.config.ts`, change `control: { value: '14px' }` to `'24px'`. Save. `panda lib --watch` re-publishes and both apps update live: every input and button gets rounder.
+2. **Override one token in one app.** In `apps/checkout/panda.config.ts`, uncomment the `theme` line and save. Panda prints that the app's value wins, the checkout turns purple, and the showcase stays blue.
 3. **Wrapper components.** Wrap a recipe component in your own (`MyButton`)? List it in the recipe's `jsx` option, or use a pattern: `jsx: [/Button$/]`. See [JSX tracking](https://panda-css.com/docs/recipes/jsx-tracking).
 
 ## Scripts
