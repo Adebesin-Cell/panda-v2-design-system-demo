@@ -1,0 +1,67 @@
+{
+  "name": "@bethelflow/ds",
+  "version": "0.1.0",
+  "private": true,
+  "description": "BethelFlow design system: Panda CSS tokens and recipes, with Ark UI components.",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    "./css": {
+      "types": "./styled-system/css/index.d.ts",
+      "default": "./styled-system/css/index.js"
+    },
+    "./recipes": {
+      "types": "./styled-system/recipes/index.d.ts",
+      "default": "./styled-system/recipes/index.js"
+    },
+    "./patterns": {
+      "types": "./styled-system/patterns/index.d.ts",
+      "default": "./styled-system/patterns/index.js"
+    },
+    "./tokens": {
+      "types": "./styled-system/tokens/index.d.ts",
+      "default": "./styled-system/tokens/index.js"
+    },
+    "./css/*": {
+      "types": "./styled-system/css/*.d.ts",
+      "default": "./styled-system/css/*.js"
+    },
+    "./recipes/*": {
+      "types": "./styled-system/recipes/*.d.ts",
+      "default": "./styled-system/recipes/*.js"
+    },
+    "./patterns/*": {
+      "types": "./styled-system/patterns/*.d.ts",
+      "default": "./styled-system/patterns/*.js"
+    },
+    "./helpers": {
+      "types": "./styled-system/helpers.d.ts",
+      "default": "./styled-system/helpers.js"
+    },
+    "./types": {
+      "types": "./styled-system/types/index.d.ts"
+    },
+    "./components/*": "./src/components/*.tsx",
+    "./panda/*": "./dist/panda/*"
+  },
+  "scripts": {
+    "codegen": "panda codegen",
+    "lib": "panda codegen && panda lib",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@ark-ui/react": "^5.39.3",
+    "@pandacss/dev": "^2.2.0",
+    "@pandacss/preset-base": "^2.2.0",
+    "@pandacss/preset-panda": "^2.2.0",
+    "@types/react": "^18.3.12",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "@ark-ui/react": "^5.39.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  }
+}

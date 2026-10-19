@@ -1,0 +1,21 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "lib": {
+      "outputs": ["dist/**", "styled-system/**"]
+    },
+    "codegen": {
+      "dependsOn": ["^lib"],
+      "outputs": ["styled-system/**"]
+    },
+    "build": {
+      "dependsOn": ["codegen"],
+      "outputs": ["dist/**"]
+    },
+    "dev": {
+      "dependsOn": ["codegen"],
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

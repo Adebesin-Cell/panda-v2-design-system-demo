@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "jsx-a11y"],
+  "ignorePatterns": ["**/styled-system/**", "**/dist/**"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    // `given-name` and `family-name` are valid HTML autocomplete tokens; the rule's list is out of date.
+    "jsx-a11y/autocomplete-valid": "off",
+    // Inline SVG logos use role="img" + aria-label, which is the recommended accessible pattern.
+    "jsx-a11y/prefer-tag-over-role": "off"
+  }
+}

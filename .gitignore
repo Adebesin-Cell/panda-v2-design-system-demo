@@ -1,0 +1,7 @@
+node_modules
+dist
+styled-system
+.turbo
+*.log
+.DS_Store
+.vscode
